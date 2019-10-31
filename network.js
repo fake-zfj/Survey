@@ -1,29 +1,5 @@
-var Main = {
-    data() {
-      return {
-        form: {
-          name: '',
-          region: '',
-          date1: '',
-          date2: '',
-          delivery: false,
-          type: [],
-          resource: '',
-          desc: ''
-        }
-      }
-    },
-    methods: {
-      onSubmit() {
-        console.log('submit!');
-      }
-    }
-  }
-var Ctor = Vue.extend(Main)
-new Ctor().$mount('#app')
-
 (function () {
-        
+
   var unit= 50,canvas, context, canvas2, context2,
       height, width, xAxis, yAxis,
       draw;
@@ -33,7 +9,7 @@ new Ctor().$mount('#app')
    */
   function init() {
 
-      canvas = document.getElementById("sineCanvas");
+      canvas = document.getElementById("canvas");
       context = canvas.getContext("2d");
 
       height = canvas.height;
@@ -145,8 +121,8 @@ new Ctor().$mount('#app')
       // Cache position of arrow on the circle
       var y = xAxis + (unitVal / 3) * Math.sin(t) * direction;
       var img = new Image();
-      img.src = "./datouwang.png";
-      //img.src = "https://i.imgur.com/bYuAw4C.png";
+      img.src = "./logo.ico";
+      // img.src = "https://i.imgur.com/bYuAw4C.png";
       // Draw yAxis bead
       context.beginPath();
       context.drawImage(img, yAxis - 29  + offset , y - 16 );
