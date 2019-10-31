@@ -21,3 +21,9 @@ var Main = {
   }
 var Ctor = Vue.extend(Main)
 new Ctor().$mount('#app')
+
+
+var network = new Network({
+	id: "canvas",
+	id:"canvas2"
+});
