@@ -43,16 +43,30 @@ var Main = {
   },
   methods: {
     onSubmit(formName) {
+      const loading = this.$loading({
+        lock: true,
+        text: '提交中',
+        spinner: 'el-icon-loading',
+        background: 'rgba(0, 0, 0, 0.7)'
+      });
       this.$refs[formName].validate((valid) => {
         if (valid) {
-          alert('submit!');
           this.$http.post('./post.php', { name: this.form.name, id: this.form.ID }, { emulateJSON: true }).then(function (res) {
-            document.write(res.body);
+            loading.close();
+            //alert('提交成功');
+            tip.visible1=true;
+            tip.visible2=false;
+            //document.write(res.body);
           }, function (res) {
+            loading.close();
+            tip.visible1=false;
+            tip.visible2=true;
             alert(res.status);
           });
         } else {
-          console.log('error submit!!');
+          loading.close();
+          tip.visible1=false;
+          tip.visible2=true;
           return false;
         }
       });

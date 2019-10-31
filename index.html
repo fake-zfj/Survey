@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <title>领取新生大礼包</title>
     <!-- import CSS -->
     <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
     <link rel="stylesheet" href="main.css">
@@ -15,6 +16,14 @@
         <el-page-header @back="goBack" content="欢迎领取新生大礼包">
         </el-page-header>
     </div> -->
+    <div id='tips' >
+        <template>
+            <el-alert v-if=visible1 title="提交成功" type="success" center show-icon>
+            </el-alert>
+            <el-alert v-if=visible2 title="提交失败" type="error" center show-icon>
+            </el-alert>
+        </template>
+    </div>
     <div id="top">
         <template>
             <el-carousel :interval="4000" type="card" height="200px" width="500px" margin="100px" boeder="100px">
@@ -60,6 +69,13 @@
             return {
                 visible: true
             }
+        }
+    })
+    var tip = new Vue({
+        el: '#tips',
+        data: {
+            visible1: false,
+            visible2: false
         }
     })
 </script>
