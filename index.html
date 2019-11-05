@@ -16,7 +16,7 @@
         <el-page-header @back="goBack" content="欢迎领取新生大礼包">
         </el-page-header>
     </div> -->
-    <div id='tips' >
+    <div id='tips'>
         <template>
             <el-alert v-if=visible1 title="提交成功" type="success" center show-icon>
             </el-alert>
@@ -41,12 +41,22 @@
             <el-form-item label="学号" prop="ID">
                 <el-input v-model.number="form.ID"></el-input>
             </el-form-item>
+            <el-form-item label="地址" prop="dz">
+                <el-cascader v-model="form.dz" :options="form.options" @change="handleChange"></el-cascader>
+            </el-form-item>
             <el-form-item>
                 <el-button type="primary" @click="onSubmit('form')">立即领取</el-button>
                 <el-button>取消</el-button>
             </el-form-item>
         </el-form>
     </div>
+    <!-- <div id="dz" class="block">
+        <span class="demonstration">默认 click 触发子菜单</span>
+        <el-cascader v-model="value" :options="options" @change="handleChange"></el-cascader>
+    </div> -->
+
+
+
 </body>
 <!-- import Vue before Element -->
 <script src="https://unpkg.com/vue/dist/vue.js"></script>
