@@ -1,124 +1,80 @@
-<<<<<<< HEAD
 
     .el-carousel__item h3 {
-        color: #010102;
-        font-size: 14px;
-        opacity: 0.75;
-        line-height: 200px;
-        margin: 0;
-      }
-      
-      .el-carousel__item:nth-child(2n) {
-        background-color: #e76b32ea;
-      }
-      
-      .el-carousel__item:nth-child(2n+1) {
-        background-color: #dfb236f1;
-      }
-    body{
-      background: rgba(111, 191, 216, 0.445);
-    }
-    #top{
-        margin: 0 auto;
-        width: 70%;
-        padding: 50px;
-    }
-    #app{
-      margin: 0 auto;
-      margin-top: 150px;
-      width: 70%;
-    }
-    #footer{
-      margin-top: 50px;
-      clear:both;
-      text-align:center;	 
-      width: 100%;
-      height: 50px;
-    }
-    #card{
-      margin: 0 auto;
-
-    }
-    #canvas-container{
-     margin-left: 130px;
-    }
-    #sineCanvas{
-      margin-left:0px;
-      margin-top: -25px;
-      height:700px;
-      z-index: -1;
-      width:2000px;
-      position : absolute;
-      display: block;
-    }
-    .text {
+      color: #010102;
       font-size: 14px;
+      opacity: 0.75;
+      line-height: 200px;
+      margin: 0;
     }
-  
-    .item {
-      margin-bottom: 18px;
+    
+    .el-carousel__item:nth-child(2n) {
+      background-color: #e76b32ea;
     }
-  
-    .clearfix:before,
-    .clearfix:after {
-      display: table;
-      content: "";
+    
+    .el-carousel__item:nth-child(2n+1) {
+      background-color: #dfb236f1;
     }
-    .clearfix:after {
-      clear: both
-    }
-  
-    .box-card {
-      width: 50px;
-      height: 100px;
-    }
-    .bottom{
-      background-color: rgba(59, 167, 218, 0.438);
-    }
-    .input{
-      border:0px;
-      background:none;
-    }
-=======
-.el-carousel__item h3 {
-  color: #475669;
-  font-size: 14px;
-  opacity: 0.75;
-  line-height: 200px;
-  margin: 0;
-}
+  body{
+    background: rgba(111, 191, 216, 0.445);
+  }
+  #top{
+      margin: 0 auto;
+      width: 70%;
+      padding: 50px;
+  }
+  #app{
+    margin: 0 auto;
+    margin-top: 150px;
+    width: 70%;
+  }
+  #footer{
+    margin-top: 50px;
+    clear:both;
+    text-align:center;	 
+    width: 100%;
+    height: 50px;
+  }
+  #card{
+    margin: 0 auto;
 
-.el-carousel__item:nth-child(2n) {
-  background-color: #99a9bf;
-}
+  }
+  #canvas-container{
+   margin-left: 130px;
+  }
+  #sineCanvas{
+    margin-left:0px;
+    margin-top: -25px;
+    height:700px;
+    z-index: -1;
+    width:2000px;
+    position : absolute;
+    display: block;
+  }
+  .text {
+    font-size: 14px;
+  }
 
-.el-carousel__item:nth-child(2n+1) {
-  background-color: #d3dce6;
-}
+  .item {
+    margin-bottom: 18px;
+  }
 
-#top {
-  margin: 0 auto;
-  width: 70%;
-  padding: 50px;
-}
+  .clearfix:before,
+  .clearfix:after {
+    display: table;
+    content: "";
+  }
+  .clearfix:after {
+    clear: both
+  }
 
-#app {
-  margin: 0 auto;
-  width: 70%;
-  padding: 50px;
-}
-
-#footer {
-  background-color: rgb(187, 178, 178);
-  color: white;
-  clear: both;
-  text-align: center;
-  padding: 5px;
-  width: 100%;
-  height: 50px;
-}
-
-/* body {
-  background-image: linear-gradient(to bottom right, rgb(138, 213, 248), rgb(255, 122, 226));
-} */
->>>>>>> shiqi
+  .box-card {
+    width: 50px;
+    height: 100px;
+  }
+  .bottom{
+    background-color: rgba(59, 167, 218, 0.438);
+  }
+  .input{
+    border:0px;
+    background:none;
+  }
