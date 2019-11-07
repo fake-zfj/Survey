@@ -8,14 +8,14 @@
     }
     
     .el-carousel__item:nth-child(2n) {
-      background-color: #e76b32ea;
+      background-color: rgba(255, 118, 95, 0.856);
     }
     
     .el-carousel__item:nth-child(2n+1) {
-      background-color: #dfb236f1;
+      background-color:rgba(255, 219, 93, 0.877);
     }
   body{
-    background: rgba(111, 191, 216, 0.445);
+    background: rgba(133, 210, 233, 0.829);
   }
   #top{
       margin: 0 auto;
@@ -28,7 +28,7 @@
     width: 70%;
   }
   #footer{
-    margin-top: 50px;
+    margin-top: 80px;
     clear:both;
     text-align:center;	 
     width: 100%;
@@ -36,7 +36,6 @@
   }
   #card{
     margin: 0 auto;
-
   }
   #canvas-container{
    margin-left: 130px;
