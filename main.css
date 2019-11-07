@@ -21,44 +21,6 @@
       margin: 0 auto;
       width: 70%;
       padding: 50px;
-<<<<<<< HEAD
-    }
-    #footer{
-      background-color:rgb(187, 178, 178);
-      color:white;
-      clear:both;
-      text-align:center;
-      padding:5px;	 
-      width: 100%;
-      height: 50px;
-    }
-    #canvas{
-      z-index: -1;
-      height: 100%;
-      margin: 100px;
-    }
-    .text {
-      font-size: 14px;
-    }
-  
-    .item {
-      margin-bottom: 18px;
-    }
-  
-    .clearfix:before,
-    .clearfix:after {
-      display: table;
-      content: "";
-    }
-    .clearfix:after {
-      clear: both
-    }
-  
-    .box-card {
-      width: 50px;
-      height: 100px;
-    }
-=======
   }
   #app{
     margin: 0 auto;
@@ -115,4 +77,3 @@
     border:0px;
     background:none;
   }
->>>>>>> yifan1
