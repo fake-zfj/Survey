@@ -15,6 +15,9 @@
 
         <el-page-header @back="goBack" content="欢迎领取新生大礼包">
         </el-page-header>
+        <img id="logo" src="./logo.ico">
+        <img id="cloud" src="./cloud.png">
+        <img id="cloud1" src="./cloud.png">
     </div>
     <div id='tips'>
         <template>
@@ -25,10 +28,11 @@
         </template>
     </div>
     <div id="top">
+            
         <template>
-            <el-carousel :interval="4000" type="card" height="200px" width="500px" margin="100px" boeder="100px">
-                <el-carousel-item v-for="item in 4" :key="item">
-                    <h3 class="medium">部门名称</h3>
+            <el-carousel :interval="4000" type="card" height="300px" width="500px" margin="100px" boeder="100px">
+                <el-carousel-item v-for="(img ,index) in imgList":key="index">
+                    <img id="img" v-bind:src="img.url">
                 </el-carousel-item>
             </el-carousel>
         </template>
@@ -44,7 +48,7 @@
                 <span>新生大礼包简介/领取规则</span>
             </div>
               <div style="font-size: 14px;">
-                  <p>纸飞机周边大派送！！！有意领取的同学请按照下面的tips操作哦～</p> 
+                  <p>纸飞机周边大派送！！！先到先得！有意领取的同学请按照下面的tips操作哦～</p> 
                 <p>①填写表格（我要周边！）</p>
                 <p>②校内同学于通知时间于艺术中心203b领取；我们支付快递费用，送货上门哦</p>
                 <p>③搬好小桌椅等待精美小周边​</p>
@@ -53,7 +57,7 @@
         </el-card>
 
     </div>
-
+    <img id="cloud2" src="./cloud.png">
 
 
     <div id="app" style="width: 50%;">
@@ -63,6 +67,12 @@
             </el-form-item>
             <el-form-item label="学号" prop="ID">
                 <el-input v-model.number="form.ID"></el-input>
+            </el-form-item>
+            <el-form-item label="电话" prop="phone">
+                <el-input v-model.number="form.phone"></el-input>
+            </el-form-item>
+            <el-form-item label="配送地址" prop="adress">
+                <el-input v-model.number="form.adress"></el-input>
             </el-form-item>
             <el-form-item>
                 <el-button type="primary" @click="onSubmit('form')">立即领取</el-button>
@@ -102,6 +112,14 @@
         el: '#top',
         data: function () {
             return {
+                
+                imgList:[
+                {url:('./1.jpg')},
+                {url:('./2.jpg')},
+                {url:('./3.jpg')},
+                {url:('./4.jpg')}
+                ],
+                name:['技术部','da','a','v'],
                 visible: true
             }
         }
