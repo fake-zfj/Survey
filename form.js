@@ -52,7 +52,7 @@ var Main = {
       });
       this.$refs[formName].validate((valid) => {
         if (valid) {
-          this.$http.post('./post.php', { name: this.form.name, id: this.form.ID }, { emulateJSON: true }).then(function (res) {
+          this.$http.post('./post.php', { name: this.form.name, id: this.form.ID,address:this.form.address,tel:this.form.phone }, { emulateJSON: true }).then(function (res) {
             loading.close();
             //alert('提交成功');
             tip.visible1 = true;

@@ -1,7 +1,7 @@
 <?php
 $dbhost = 'localhost:3306';  // mysql服务器主机地址
-$dbuser = 'root';            // mysql用户名
-$dbpass = '';          // mysql用户名密码
+$dbuser = 'Survey_user';            // mysql用户名
+$dbpass = 'surveypw';          // mysql用户名密码
 $conn = mysqli_connect($dbhost, $dbuser, $dbpass);
 if(! $conn )
 {
@@ -11,7 +11,9 @@ if(! $conn )
 mysqli_query($conn , "set names utf8");
 $name=$_POST['name'];
 $id=$_POST['id'];
-$sql = "INSERT INTO `survey` (`name`,`id`) VALUES('$name',$id);";
+$add=$_POST['address']?:'/';
+$tel=$_POST['tel']?:'0';
+$sql = "INSERT INTO `survey` (`name`,`id`,`address`,`tel`) VALUES('$name',$id,'$add',$tel);";
 mysqli_select_db( $conn, 'test' );
 $retv = mysqli_query( $conn, $sql );
 if(! $retv )
