@@ -36,16 +36,18 @@
   }
   #card{
     margin: 0 auto;
+    
   }
   #canvas-container{
-   margin-left: 130px;
+   margin: 0 auto;
+    
   }
   #sineCanvas{
-    margin-left:-150px;
-    margin-top: -25px;
-    height:700px;
+    margin:0 auto;
+    
+    height:100%;
     z-index: -1;
-    width:100%;
+    width:99%;
     position : absolute;
     display: block;
   }
@@ -94,14 +96,17 @@
     margin-left: 50px;
   }
   #cloud{
-    margin-left: 500px;
+    right: 500px;
+    margin-left: 450px;
     height: 120x;
     width: 130px;
     z-index: -1;
     position : absolute;
   }
   #cloud1{
-    margin-left: 800px;
+    position:absolute;
+    right:30px;
+    margin-left: 750px;
     height: 150x;
     width: 150px;
     margin-top: -75px;

@@ -23,7 +23,7 @@
     <div id="top">
             
         <template>
-            <el-carousel :interval="4000" type="card" height="300px" width="500px" margin="100px" boeder="100px">
+            <el-carousel :interval="4000" type="card" height="300px" width="80%" margin="0 auto" boeder="100px">
                 <el-carousel-item v-for="(img ,index) in imgList":key="index">
                     <img id="img" v-bind:src="img.url">
                 </el-carousel-item>
@@ -32,9 +32,7 @@
     </div>
 
 
-    <div id="canvas-container">
-        <canvas id="sineCanvas" width="1024px" height="600px"></canvas>
-    </div>
+    
     <div id="card">
         <el-card class="box-card" style="width: 600px;height: 255px;margin: 0 auto;">
             <div slot="header" class="clearfix">
@@ -43,14 +41,18 @@
               <div style="font-size: 14px;">
                   <p>纸飞机周边大派送！！！先到先得！有意领取的同学请按照下面的tips操作哦～</p> 
                 <p>①填写表格（我要周边！）</p>
-                <p>②校内同学于通知时间于艺术中心203b领取；我们支付快递费用，送货上门哦</p>
+                <p>②我们支付快递费用，送货上门哦</p>
                 <p>③搬好小桌椅等待精美小周边​</p>
                 <p>感谢大家对纸飞机活动的支持～花店​不开啦，但花一直都在</p>
               </div> 
         </el-card>
 
     </div>
-    <img id="cloud2" src="./cloud.png">
+    <div id="canvas-container">
+        <canvas id="sineCanvas" width="1024px" height="600px"></canvas>
+         
+    </div>
+   <img id="cloud2" src="./cloud.png">
 
 
     <div id="app" style="width: 50%;">
