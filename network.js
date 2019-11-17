@@ -15,7 +15,7 @@
         height = canvas.height;
         width = canvas.width;
 
-        xAxis = Math.floor(height *0.1);
+        xAxis = Math.floor(height /10);
         yAxis = Math.floor(width / 4);
 
         context.save();
