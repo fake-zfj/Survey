@@ -43,13 +43,11 @@
     
   }
   #sineCanvas{
-    margin:0 auto;
     
-    height:550px;
+    left: 10%;
     z-index: -1;
-    width:99%;
-    position : absolute;
     display: block;
+    position : absolute;
   }
   .text {
     font-size: 14px;
