@@ -1,3 +1,4 @@
+
 var Main = {
   data() {
     var check_id = (rule, value, callback) => {
@@ -31,6 +32,8 @@ var Main = {
         name: '',
         ID: undefined,
         dz: [],
+        disabled:false,
+        radio:"2"
       },
       rules: {
         name: [
@@ -39,7 +42,9 @@ var Main = {
         ID: [
           { validator: check_id, trigger: 'blur' }
         ]
-      }
+      },
+      radio1:"1",
+      
     }
   },
   methods: {
@@ -71,7 +76,15 @@ var Main = {
           return false;
         }
       });
-    }
+    },
+    setAttr(){
+      this.form.disabled=true
+      
+    },
+    cancelAttr(){
+      this.form.disabled=false
+    },
+    
   }
 }
 var Ctor = Vue.extend(Main)

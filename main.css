@@ -15,17 +15,20 @@
       background-color:rgba(255, 219, 93, 0.877);
     }
   body{
-    background: rgb(159, 236, 255);
+    background: rgba(254, 255, 255, 0);
   }
-  #top{
+  #top1{
       margin: 0 auto;
-      width: 70%;
-      padding: 50px;
+      
+  }
+  .row-bg {
+    padding: 10px 0;
+    
   }
   #app{
     margin: 0 auto;
     margin-top: 150px;
-    width: 70%;
+    
   }
   #footer{
     margin-top: 80px;
@@ -66,11 +69,7 @@
     clear: both
   }
 
-  .box-card {
-    width: 50px;
-    height: 100px;
-    margin-top: -50px;
-  }
+
   .bottom{
     background-color: rgba(59, 167, 218, 0.438);
   }
@@ -117,3 +116,16 @@
     z-index: -2;
     position : absolute;
   }
+  #group{
+    height: 180px;
+    width: 140px;
+    right: 0;
+    position: relative;
+  }
+  #el-radio
+  {
+    
+    width: 500px;
+    
+  }
+  
