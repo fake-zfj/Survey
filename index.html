@@ -22,7 +22,7 @@
     
     <div id="top">
         <el-row :gutter="10" type="flex" class="row-bg" justify="center">
-            <el-col  :md="22" lg="18" ><div id="top1">
+            <el-col  :xs="23" sm=“22 md="20" lg="18" ><div id="top1">
         <template>
             <el-carousel :interval="4000" type="card" height="300px" width="80%" margin="0 auto" boeder="100px">
                 <el-carousel-item v-for="(img ,index) in imgList":key="index">
@@ -38,7 +38,7 @@
     
     <div id="card">
             <el-row :gutter="10" type="flex" class="row-bg" justify="center">
-                    <el-col :md="14" lg="12" ><div >
+                    <el-col :xs="14" sm="12" md="12" lg="12" ><div >
         <el-card class="box-card" style="height:530px;margin: 0 auto;">
             <div slot="header" class="clearfix">
                 <span>活动简介/领取规则</span>
@@ -66,7 +66,7 @@
 
     <div id="app" >
             <el-row :gutter="10" type="flex" class="row-bg" justify="center">
-                    <el-col  :md="18" lg="12" ><div >
+                    <el-col  :xs="16" sm="14"md="12" lg="12" ><div >
                          <div id="el-radio">
                                 <template>
                                     <div style="margin:40px ;">
