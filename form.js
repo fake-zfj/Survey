@@ -9,7 +9,7 @@ var Main = {
           if (!Number.isInteger(value)) {
             callback(new Error('请输入数字值'));
           } else {
-            if (value <= 10000000 || value >= 200000000) {
+            if (value <= 100000000 || value >= 200000000) {
               callback(new Error('学号格式错误'));
             } else {
               callback();
@@ -33,7 +33,7 @@ var Main = {
         ID: undefined,
         dz: [],
         disabled:false,
-        radio:"2"
+        radio:"1"
       },
       rules: {
         name: [
@@ -43,7 +43,6 @@ var Main = {
           { validator: check_id, trigger: 'blur' }
         ]
       },
-      radio1:"1",
       
     }
   },

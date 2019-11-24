@@ -19,7 +19,7 @@
         <img id="cloud" src="./cloud.png">
         <img id="cloud1" src="./cloud.png">
     </div>
-    
+
     <div id="top">
         <el-row :gutter="10" type="flex" class="row-bg" justify="center">
             <el-col  :xs="23" sm=“22 md="20" lg="18" ><div id="top1">
@@ -35,7 +35,7 @@
     </div>
 
 
-    
+
     <div id="card">
             <el-row :gutter="10" type="flex" class="row-bg" justify="center">
                     <el-col :xs="14" sm="12" md="12" lg="12" ><div >
@@ -57,12 +57,11 @@
     </el-card>
     </div></el-col>
     </div>
-    <div id="canvas-container">
+    <div id="canvas-container" style="margin-bottom:200px;">
         <canvas id="sineCanvas" width="750" height="200"></canvas>
-    
+        <img id="cloud2" src="./cloud.png">
     </div>
-   <img id="cloud2" src="./cloud.png">
-
+    
 
     <div id="app" >
             <el-row :gutter="10" type="flex" class="row-bg" justify="center">
@@ -121,7 +120,6 @@
 <script src="./network.js">
     context.globalAlpha = 0.5;
 </script>
-<script src="./main.js"></script>
 <script src="./network.js"></script>
 <script src="https://cdn.staticfile.org/vue-resource/1.5.1/vue-resource.min.js"></script>
 <script src="./form.js"></script>
@@ -138,12 +136,19 @@
         el: '#top',
         data: function () {
             return {
-                
-                imgList:[
-                {url:('./1.jpg')},
-                {url:('./2.jpg')},
-                {url:('./3.jpg')},
-                {url:('./4.jpg')}
+
+                imgList: [{
+                        url: ('./1.jpg')
+                    },
+                    {
+                        url: ('./2.jpg')
+                    },
+                    {
+                        url: ('./3.jpg')
+                    },
+                    {
+                        url: ('./4.jpg')
+                    }
                 ],
                 visible: true
             }
@@ -165,7 +170,6 @@
             }
         }
     })
-
 </script>
 <script>
     var tip = new Vue({
