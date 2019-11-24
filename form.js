@@ -43,7 +43,6 @@ var Main = {
           { validator: check_id, trigger: 'blur' }
         ]
       },
-      radio1:"1",
       
     }
   },

@@ -19,91 +19,90 @@
         <img id="cloud" src="./cloud.png">
         <img id="cloud1" src="./cloud.png">
     </div>
-    
+
     <div id="top">
         <el-row :gutter="10" type="flex" class="row-bg" justify="center">
-            <el-col :xs=" 24"sm="20" :md="15" lg="18" ><div id="top1">
-        <template>
-            <el-carousel :interval="4000" type="card" height="300px" width="80%" margin="0 auto" boeder="100px">
-                <el-carousel-item v-for="(img ,index) in imgList":key="index">
-                    <img id="img" v-bind:src="img.url">
-                </el-carousel-item>
-            </el-carousel>
-        </template>
-    </div></el-col>
-    </el-row>
+            <el-col :xs=" 24" sm="20" :md="15" lg="18">
+                <div id="top1">
+                    <template>
+                        <el-carousel :interval="4000" type="card" height="300px" width="80%" margin="0 auto"
+                            boeder="100px">
+                            <el-carousel-item v-for="(img ,index) in imgList" :key="index">
+                                <img id="img" v-bind:src="img.url">
+                            </el-carousel-item>
+                        </el-carousel>
+                    </template>
+                </div>
+            </el-col>
+        </el-row>
     </div>
 
 
-    
+
     <div id="card">
-            <el-row :gutter="10" type="flex" class="row-bg" justify="center">
-                    <el-col :xs=" 20"sm="15" :md="10" lg="12" ><div >
-        <el-card class="box-card" style="height:530px;margin: 0 auto;">
-            <div slot="header" class="clearfix">
-                <span>活动简介/领取规则</span>
-            </div>
-              <div style="font-size: 14px;">
-                    <p>纸飞机周边大派送！！！先到先得！有意领取的同学请按照下面的tips操作哦～</p> 
-                    <p>①填写表格（我要周边！）</p>
-                    <p>②校内同学请加群，群内通知领取的时间地点；群号：910702270。</p>
-                    <img id="group" src="./group.jpg">
-                    <p>③校外同学填写好配送地址，我们支付快递费用，送货上门哦</p>
-                    <p>④搬好小桌椅等待精美小周边​</p>
-                    <p>注：一人一份哦，发现有“薅羊毛”者取消资格</p>
-                    <p>感谢大家对纸飞机活动的支持～花店​不开啦，但花一直都在</p>
-              </div> 
-        </el-card>
-    </el-card>
-    </div></el-col>
+        <el-row :gutter="10" type="flex" class="row-bg" justify="center">
+            <el-col :xs=" 20" sm="15" :md="10" lg="12">
+                <div>
+                    <el-card class="box-card" style="height:530px;margin: 0 auto;">
+                        <div slot="header" class="clearfix">
+                            <span>活动简介/领取规则</span>
+                        </div>
+                        <div style="font-size: 14px;">
+                            <p>纸飞机周边大派送！！！先到先得！有意领取的同学请按照下面的tips操作哦～</p>
+                            <p>①填写表格（我要周边！）</p>
+                            <p>②校内同学请加群，群内通知领取的时间地点；群号：910702270。</p>
+                            <img id="group" src="./group.jpg">
+                            <p>③校外同学填写好配送地址，我们支付快递费用，送货上门哦</p>
+                            <p>④搬好小桌椅等待精美小周边​</p>
+                            <p>注：一人一份哦，发现有“薅羊毛”者取消资格</p>
+                            <p>感谢大家对纸飞机活动的支持～花店​不开啦，但花一直都在</p>
+                        </div>
+                    </el-card>
+                    </el-card>
+                </div>
+            </el-col>
     </div>
-    <div id="canvas-container">
+    <div id="canvas-container" style="margin-bottom:200px;">
         <canvas id="sineCanvas" width="750" height="200"></canvas>
+        <img id="cloud2" src="./cloud.png">
+    </div>
     
-    </div>
-   <img id="cloud2" src="./cloud.png">
 
-
-    <div id="app" >
-            <el-row :gutter="10" type="flex" class="row-bg" justify="center">
-                    <el-col :xs=" 20"sm="15" :md="10" lg="12" ><div >
-                         <div id="el-radio">
-                                <template>
-                                    <div style="margin:40px ;">
-                                        <el-radio-group >
-                                         <el-radio v-model="form.radio"  label="1"border @change="cancelAttr()">校外</el-radio>
-                                        <el-radio  v-model="form.radio" label="2" border @change="setAttr()">校内</el-radio>
-                                        </el-radio-group>
-                                         </div>
-                                </template>
-                            </div>
-        <el-form ref="form" :model="form" label-width="80px" status-icon :rules="rules" ref="ruleForm">
-            <el-form-item label="姓名" prop="name">
-                <el-input v-model="form.name"></el-input>
-            </el-form-item>
-            <el-form-item label="学号" prop="ID">
-                <el-input v-model.number="form.ID"></el-input>
-            </el-form-item>
-            <el-form-item label="电话" prop="phone">
-                <el-input v-model.number="form.phone"></el-input>
-            </el-form-item>
-            <el-form-item label="配送地址" prop="address">
-                <el-input id="address" v-model="form.address" v-bind:disabled="form.disabled"></el-input>
-            </el-form-item>
-            <el-form-item>
-                <el-button type="primary" @click="onSubmit('form')">立即领取</el-button>
-                <el-button>取消</el-button>
-            </el-form-item>
-        </el-form>
-    </div>
-    <div id='tips'>
-        <template>
-            <el-alert v-if=visible1 title="提交成功" type="success" center show-icon>
-            </el-alert>
-            <el-alert v-if=visible2 title="提交失败" type="error" center show-icon>
-            </el-alert>
-        </template>
-    </div></el-col>
+    <el-row :gutter="10" type="flex" class="row-bg" justify="center">
+        <el-col :xs=" 20" sm="15" :md="10" lg="12">
+            <div id="app" style="margin:40px;">
+                <el-form ref="form" :model="form" label-width="80px" status-icon :rules="rules" ref="ruleForm">
+                    <el-radio-group v-model="form.radio">
+                        <el-radio label="1" @change="cancelAttr()">校外</el-radio>
+                        <el-radio label="2" @change="setAttr()">校内</el-radio>
+                    </el-radio-group>
+                    <el-form-item label="姓名" prop="name">
+                        <el-input v-model="form.name"></el-input>
+                    </el-form-item>
+                    <el-form-item label="学号" prop="ID">
+                        <el-input v-model.number="form.ID"></el-input>
+                    </el-form-item>
+                    <el-form-item label="电话" prop="phone">
+                        <el-input v-model.number="form.phone"></el-input>
+                    </el-form-item>
+                    <el-form-item label="配送地址" prop="address">
+                        <el-input id="address" v-model="form.address" v-bind:disabled="form.disabled"></el-input>
+                    </el-form-item>
+                    <el-form-item>
+                        <el-button type="primary" @click="onSubmit('form')">立即领取</el-button>
+                        <el-button>取消</el-button>
+                    </el-form-item>
+                </el-form>
+            </div>
+            <div id='tips'>
+                <template>
+                    <el-alert v-if=visible1 title="提交成功" type="success" center show-icon>
+                    </el-alert>
+                    <el-alert v-if=visible2 title="提交失败" type="error" center show-icon>
+                    </el-alert>
+                </template>
+            </div>
+        </el-col>
     </el-row>
     </div>
     <div id="footer">
@@ -121,7 +120,6 @@
 <script src="./network.js">
     context.globalAlpha = 0.5;
 </script>
-<script src="./main.js"></script>
 <script src="./network.js"></script>
 <script src="https://cdn.staticfile.org/vue-resource/1.5.1/vue-resource.min.js"></script>
 <script src="./form.js"></script>
@@ -138,12 +136,19 @@
         el: '#top',
         data: function () {
             return {
-                
-                imgList:[
-                {url:('./1.jpg')},
-                {url:('./2.jpg')},
-                {url:('./3.jpg')},
-                {url:('./4.jpg')}
+
+                imgList: [{
+                        url: ('./1.jpg')
+                    },
+                    {
+                        url: ('./2.jpg')
+                    },
+                    {
+                        url: ('./3.jpg')
+                    },
+                    {
+                        url: ('./4.jpg')
+                    }
                 ],
                 visible: true
             }
@@ -165,7 +170,6 @@
             }
         }
     })
-
 </script>
 <script>
     var tip = new Vue({
