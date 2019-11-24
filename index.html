@@ -22,7 +22,7 @@
 
     <div id="top">
         <el-row :gutter="10" type="flex" class="row-bg" justify="center">
-            <el-col :xs=" 24" sm="20" :md="15" lg="18">
+            <el-col :xs="23" sm=“22 md="20" lg="18">
                 <div id="top1">
                     <template>
                         <el-carousel :interval="4000" type="card" height="300px" width="80%" margin="0 auto"
@@ -41,7 +41,7 @@
 
     <div id="card">
         <el-row :gutter="10" type="flex" class="row-bg" justify="center">
-            <el-col :xs=" 20" sm="15" :md="10" lg="12">
+            <el-col :xs="14" sm="12" md="12" lg="12">
                 <div>
                     <el-card class="box-card" style="height:530px;margin: 0 auto;">
                         <div slot="header" class="clearfix">
@@ -51,7 +51,7 @@
                             <p>纸飞机周边大派送！！！先到先得！有意领取的同学请按照下面的tips操作哦～</p>
                             <p>①填写表格（我要周边！）</p>
                             <p>②校内同学请加群，群内通知领取的时间地点；群号：910702270。</p>
-                            <img id="group" src="./group.JPG">
+                            <img id="group" src="./group.jpg">
                             <p>③校外同学填写好配送地址，我们支付快递费用，送货上门哦</p>
                             <p>④搬好小桌椅等待精美小周边​</p>
                             <p>注：一人一份哦，发现有“薅羊毛”者取消资格</p>
@@ -66,44 +66,47 @@
         <canvas id="sineCanvas" width="750" height="200"></canvas>
         <img id="cloud2" src="./cloud.png">
     </div>
-    
 
-    <el-row :gutter="10" type="flex" class="row-bg" justify="center">
-        <el-col :xs=" 20" sm="15" :md="10" lg="12">
-            <div id="app" style="margin:40px;">
-                <el-form ref="form" :model="form" label-width="80px" status-icon :rules="rules" ref="ruleForm">
-                    <el-radio-group v-model="form.radio">
-                        <el-radio label="1" @change="cancelAttr()">校外</el-radio>
-                        <el-radio label="2" @change="setAttr()">校内</el-radio>
-                    </el-radio-group>
-                    <el-form-item label="姓名" prop="name">
-                        <el-input v-model="form.name"></el-input>
-                    </el-form-item>
-                    <el-form-item label="学号" prop="ID">
-                        <el-input v-model.number="form.ID"></el-input>
-                    </el-form-item>
-                    <el-form-item label="电话" prop="phone">
-                        <el-input v-model.number="form.phone"></el-input>
-                    </el-form-item>
-                    <el-form-item label="配送地址" prop="address">
-                        <el-input id="address" v-model="form.address" v-bind:disabled="form.disabled"></el-input>
-                    </el-form-item>
-                    <el-form-item>
-                        <el-button type="primary" @click="onSubmit('form')">立即领取</el-button>
-                        <el-button>取消</el-button>
-                    </el-form-item>
-                </el-form>
-            </div>
-            <div id='tips'>
-                <template>
-                    <el-alert v-if=visible1 title="提交成功" type="success" center show-icon>
-                    </el-alert>
-                    <el-alert v-if=visible2 title="提交失败" type="error" center show-icon>
-                    </el-alert>
-                </template>
-            </div>
-        </el-col>
-    </el-row>
+
+    <div id="app" style="margin:40px ;">
+        <el-row :gutter="10" type="flex" class="row-bg" justify="center">
+            <el-col :xs="16" sm="14" md="12" lg="12">
+                <div>
+
+                    <el-form ref="form" :model="form" label-width="80px" status-icon :rules="rules" ref="ruleForm">
+                        <el-radio-group v-model="form.radio">
+                            <el-radio label="1" border @change="cancelAttr()">校外</el-radio>
+                            <el-radio label="2" border @change="setAttr()">校内</el-radio>
+                        </el-radio-group>
+
+                        <el-form-item label="姓名" prop="name">
+                            <el-input v-model="form.name"></el-input>
+                        </el-form-item>
+                        <el-form-item label="学号" prop="ID">
+                            <el-input v-model.number="form.ID"></el-input>
+                        </el-form-item>
+                        <el-form-item label="电话" prop="phone">
+                            <el-input v-model.number="form.phone"></el-input>
+                        </el-form-item>
+                        <el-form-item label="配送地址" prop="address">
+                            <el-input id="address" v-model="form.address" v-bind:disabled="form.disabled"></el-input>
+                        </el-form-item>
+                        <el-form-item>
+                            <el-button type="primary" @click="onSubmit('form')">立即领取</el-button>
+                            <el-button>取消</el-button>
+                        </el-form-item>
+                    </el-form>
+                </div>
+                <div id='tips'>
+                    <template>
+                        <el-alert v-if=visible1 title="提交成功" type="success" center show-icon>
+                        </el-alert>
+                        <el-alert v-if=visible2 title="提交失败" type="error" center show-icon>
+                        </el-alert>
+                    </template>
+                </div>
+            </el-col>
+        </el-row>
     </div>
     <div id="footer">
         <el-dividerc></el-dividerc>
