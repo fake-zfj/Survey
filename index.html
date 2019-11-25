@@ -22,7 +22,7 @@
 
     <div id="top">
             <el-row :gutter="10" type="flex" class="row-bg" justify="center">
-                <el-col :xs=" 23"sm="20" :md="19" lg="18" >
+                <el-col :xs=" 23" :sm="20" :md="19" :lg="18" >
                     <div id="top1">
                         <template>
                             <el-carousel :interval="4000" type="card" height="300px" width="80%" margin="0 auto" boeder="100px">
@@ -40,9 +40,9 @@
 
    <div id="card">
             <el-row :gutter="10" type="flex" class="row-bg" justify="center">
-                    <el-col :xs=" 16"sm="15" :md="14" lg="12" >
+                    <el-col :xs=" 16" :sm="15" :md="14" :lg="12" >
                         <div >
-                            <el-card class="box-card" style="height:530px;margin: 0 auto;">
+                            <el-card class="box-card" style="height:530px;min-width: 700px;;margin: 0 auto;">
                                 <div slot="header" class="clearfix">
                                     <span>活动简介/领取规则</span>
                                 </div>
@@ -69,7 +69,7 @@
     
        <div id="app" >
             <el-row :gutter="10" type="flex" class="row-bg" justify="center">
-                <el-col :xs=" 14"sm="14" :md="14" lg="12" >
+                <el-col :xs=" 14":sm="14" :md="14" :lg="12" >
                     <div >
                     
                         <el-form ref="form" :model="form" label-width="80px" status-icon :rules="rules" ref="ruleForm">
