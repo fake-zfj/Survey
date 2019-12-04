@@ -10,7 +10,7 @@
     <link rel="icon" href="./logo.ico" type="image/x-icon">
 </head>
 
-<body>
+<body background="background.jpg">
     <div id="ti">
 
         <el-page-header @back="goBack" content="欢迎领取纸飞机限量周边">
@@ -69,14 +69,14 @@
     
        <div id="app" >
             <el-row :gutter="10" type="flex" class="row-bg" justify="center">
-                <el-col :xs=" 14":sm="14" :md="14" :lg="12" >
+                <el-col :xs=" 14":sm="14" :md="14" :lg="8" >
                     <div >
                     
                         <el-form ref="form" :model="form" label-width="80px" status-icon :rules="rules" ref="ruleForm">
                             <div style="margin:40px ;">
                                 <el-radio-group  v-model="form.radio" >
-                                    <el-radio   label="1"border @change="cancelAttr()">校外</el-radio>
-                                    <el-radio   label="2" border @change="setAttr()">校内</el-radio>
+                                    <el-radio   label="1"border @change="cancelAttr()" class="radio-button">校外</el-radio>
+                                    <el-radio   label="2" border @change="setAttr()" class="radio-button">校内</el-radio>
                                 </el-radio-group>
                             </div>
                             <el-form-item label="姓名" prop="name">
