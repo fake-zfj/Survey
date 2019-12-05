@@ -13,7 +13,7 @@ $name=$_POST['name'];
 $id=$_POST['id'];
 $add=$_POST['address']!="undefined"?$_POST['address']:"";
 $tel=$_POST['tel']?:'0';
-$sql = "INSERT INTO `survey` (`name`,`id`,`address`,`tel`) VALUES('$name',$id,'$add',$tel);";
+$sql = "INSERT INTO `survey` (`name`,`id`,`address`,`tel`) VALUES('$name','$id','$add',$tel);";
 mysqli_select_db( $conn, 'test' );
 $retv = mysqli_query( $conn, $sql );
 if(! $retv )
