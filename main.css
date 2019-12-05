@@ -16,7 +16,11 @@
     }
     body{
       background-size:100%;
-      background-attachment: fixed;
+      background-attachment: fixed; 
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      /* background-size: contain; */
   }
   #top1{
       margin: 0 auto;
@@ -131,4 +135,8 @@
   }
   .radio-button{
     background-color: rgb(255, 255, 255);
+  }
+  #box-card
+  {
+    background-color: rgba(255, 255, 255, 0.671);
   }
