@@ -6,10 +6,11 @@ var Main = {
         return callback(new Error('学号不可以为空'));
       } else {
         setTimeout(() => {
-          if (!Number.isInteger(value)) {
+          var re = /^[0-9]+.?[0-9]*$/
+          if (!re.test(value)) {
             callback(new Error('请输入数字值'));
           } else {
-            if (value <= 100000000 || value >= 200000000) {
+            if (value.length!=9) {
               callback(new Error('学号格式错误'));
             } else {
               callback();
