@@ -10,7 +10,7 @@ if(! $conn )
 // 设置编码，防止中文乱码
 mysqli_query($conn , "set names utf8");
  
-$sql = 'SELECT * FROM Survey';
+$sql = 'SELECT * FROM survey';
  
 //mysqli_select_db( $conn, 'Survey' );
 mysqli_query($conn,"use test;");
