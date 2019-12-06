@@ -78,6 +78,9 @@ var Main = {
     cancelAttr(){
       this.form.disabled=false
     },
+    reset(){
+      this.$refs.form.resetFields();
+    }
     
   }
 }
