@@ -20,7 +20,19 @@ if(! $retv )
 {
     die('无法插入数据: ' . mysqli_error($conn));
 }
-echo '感谢完成问卷';
+echo '<!DOCTYPE html>
+<html>
+<head>
+    <title>提交成功</title>
+</head>
+<body>
+    <center>
+        <img src="./提交成功.png" alt="提交成功">
+        <br>
+        <img src="./飞机娘.jpg" alt="飞机娘">
+    </center>
+</body>
+</html>';
 
 mysqli_close($conn);
 ?> 

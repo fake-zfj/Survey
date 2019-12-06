@@ -97,14 +97,6 @@
                             </el-form-item>
                         </el-form>
                     </div>
-                <div id='tips'>
-                    <template>
-                        <el-alert v-if=visible1 title="提交成功" type="success" center show-icon>
-                        </el-alert>
-                        <el-alert v-if=visible2 title="提交失败" type="error" center show-icon>
-                        </el-alert>
-                    </template>
-                </div>
             </el-col>
         </el-row>
     </div>
@@ -177,14 +169,4 @@
         }
     })
 </script>
-<script>
-    var tip = new Vue({
-        el: '#tips',
-        data: {
-            visible1: false,
-            visible2: false
-        }
-    })
-</script>
-
 </html>

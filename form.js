@@ -60,19 +60,13 @@ var Main = {
           this.$http.post('./post.php', { name: this.form.name, id: this.form.ID,address:this.form.address,tel:this.form.phone }, { emulateJSON: true }).then(function (res) {
             loading.close();
             //alert('提交成功');
-            tip.visible1 = true;
-            tip.visible2 = false;
-            //document.write(res.body);
+            document.write(res.body);
           }, function (res) {
             loading.close();
-            tip.visible1 = false;
-            tip.visible2 = true;
             alert(res.status);
           });
         } else {
           loading.close();
-          tip.visible1 = false;
-          tip.visible2 = true;
           return false;
         }
       });
